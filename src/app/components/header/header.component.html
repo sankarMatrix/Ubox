@@ -1,0 +1,49 @@
+<div class="headerArea">
+      
+      <nav class="navbar navbar-expand-lg navbar-light mb-3 customNav">
+        <div class="container-fluid">
+          <a class="navbar-brand" [routerLink]="'.'"><img src="./../../../assets/images/logo.png" alt="" srcset=""></a>
+      
+          <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+          <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+            &#9776;
+          </button>
+      
+          <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+          <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item searchArea">
+                    <form class="d-flex">
+                        <input class="form-control me-2 search" type="search" placeholder="Search experience" aria-label="Search">
+                    </form>
+                </li>
+                <li class="nav-item connectPhAra">
+                    <a class="nav-link connectPh" href="#">
+                        <img src="./../../../assets/images/mobile.png" alt=""> <span>Connect your phone</span> <img src="./../../../assets/images/scan_img.png" alt="">
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0 mr-auto text-right rightNav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        How does UBOX work?
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Do you want to setup your <span class="blueTxt">Xpace?</span> 
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Do you want to create your first experience?
+                    </a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      
+      
+</div>

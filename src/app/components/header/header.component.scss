@@ -1,0 +1,126 @@
+.headerArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #fff;
+    z-index: 10;
+}
+
+.customNav {
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+
+    a {
+        color: #fff;
+
+        // span{
+        //     color: #4caedf;
+        // }
+    }
+
+    .rightNav {
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+        li {
+            list-style: none;
+
+            a {
+                padding: 0 30px;
+                position: relative;
+
+                &:before {
+                    content: "\2022";
+                    font-size: 27px;
+                    color: #3d3d3d;
+                    font-weight: bold;
+                    display: inline-block;
+                    position: absolute;
+                    top: -13px;
+                    left: -10px;
+                }
+            }
+
+            &:first-child{
+                 
+                a{
+                    &:before{
+                        content: '';
+                    }
+                }
+            }
+
+            &:last-child{
+                 
+                a{
+                    padding-right: 0;
+                }
+            }
+
+
+        }
+    }
+
+    .blueTxt{
+        color: #4db1e2;
+    }
+}
+
+.navbar-brand {
+    padding: 0;
+    margin-right: 30px;
+}
+
+.search::placeholder {
+    color: #fff;
+    opacity: 1;
+    /* Firefox */
+}
+
+.connectPhAra {
+    display: flex;
+    align-items: center;
+
+    .connectPh {
+        border-radius: 20px;
+        border: 1px dashed #575757;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            background-color: #212121;
+        }
+
+        span {
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+    }
+}
+
+.search {
+    background-color: #2b2b2b;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    min-width: 200px;
+
+    &:focus,
+    &:active {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+.searchArea {
+    display: flex;
+    align-items: center;
+}

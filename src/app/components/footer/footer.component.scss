@@ -1,0 +1,19 @@
+.footerArea{
+    background-color: #000;
+    min-height: 44px;
+}
+.footerTextArea{
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+
+    span{
+        color: #fff;
+    }
+    .middleTxt{
+        text-align: center;
+    }
+    .rightText{
+        text-align: right;
+    }
+}
