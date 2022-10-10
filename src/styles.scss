@@ -8,4 +8,23 @@ body{
     padding: 0;
     color: #8a8c8e;
     font-size: 13px;
+    overflow-x: hidden;
 }
+
+.menuOn .navbar-brand{
+    filter: blur(2px);
+}
+
+.menuOn .home{
+    filter: blur(2px);
+}
+.menuOn .footerArea{
+    filter: blur(2px);
+}
+.menuOff .navbar-collapse{
+    right: -383px !important;
+}
+.menuOn .navbar-collapse{
+    right:0 !important;
+}
+

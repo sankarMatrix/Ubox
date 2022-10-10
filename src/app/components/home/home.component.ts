@@ -18,4 +18,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  status: boolean = false;
+  isMenuCollapsed(){
+    this.status = !this.status;       
+}
+
 }
