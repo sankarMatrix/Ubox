@@ -12,7 +12,11 @@
         padding:100px 20px 50px 20px;
         background-color: transparent;
         width:100%;
+        @media only screen and (max-width:767px) {
+            padding:70px 0 50px 0;
+        }
     }
+    
     .contAreaDetailsLeft{
         display:block;
         margin:0 auto;
