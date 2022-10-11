@@ -7,7 +7,7 @@
 body{
     margin: 0;
     padding: 0;
-    color: #8a8c8e;
+    color: #B0B3B5;
     font-size: 13px;
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
@@ -27,7 +27,7 @@ body{
     filter: blur(2px);
 }
 .menuOff .navbar-collapse{
-    right: -383px !important;
+    right: -100% !important;
 }
 .menuOn .navbar-collapse{
     right:0 !important;
