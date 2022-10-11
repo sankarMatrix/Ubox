@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,10 @@ export class HeaderComponent implements OnInit {
   @Output() bodyStatus = new EventEmitter<boolean>();
   @Input() menuOff: boolean = false;
 
-  constructor() { }
+  constructor(private route:Router) { }
+  searchEvent(){
+    this.route.navigateByUrl('search-listing')
+  }
 
   ngOnInit(): void {
   }
@@ -23,5 +27,6 @@ clickEvent(){
     this.bodyStatus.emit(true);
     this.isMenuCollapsed = this.menuOff;
 }
+
 
 }
