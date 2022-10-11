@@ -1,49 +1,83 @@
 // banner area start
-.bannerArea{
-    position:relative;
-    width:100%; 
-    height: 387px;
-    // overflow:hidden;
-    z-index: 5;
+.bannerArea {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow:hidden;
+    // z-index: 5;
     text-align: center;
 
-    &:after{
-    content:'';
-    position:absolute;
-    top:0; 
-    left:-25%; 
-    bottom:4px;
-    width: 150%;
-    background-color: #000000;
-    border-bottom-left-radius: 100%;
-    border-bottom-right-radius: 100%;
-    border-top:0;
-    z-index:-1;
-    }
-
-    .banneranimation{
+    &::before{
+        content: '';
         position: absolute;
-        top: 137px;
-        left: 0;
+        top: 0;
+        left:0;
         right: 0;
+        bottom: 4px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
         z-index: 2;
     }
+
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: -25%;
+    //     bottom: 4px;
+    //     width: 150%;
+    //     background-color: #000000;
+    //     border-bottom-left-radius: 100%;
+    //     border-bottom-right-radius: 100%;
+    //     border-top: 0;
+    //     z-index: -1;
+    // }
+
+    // video{
+    //     height: 387px;
+    // }
+
+   
+
+    .banneranimation {
+        position: absolute;
+        top: 166px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
 }
+
 // banner area end
 
 // content area start
-.contArea{
+.contArea {
     margin: 0;
     padding: 0;
     background-color: #171717;
     min-height: 500px;
     margin-top: -57px;
-}
-.categorySec{
-    margin: 0;
-    padding: 150px 20px 0 20px;
+    position: relative;
+    z-index: 2;
 
-    h1{
+    &:before{
+        content: "";
+    position: absolute;
+    clip-path: polygon(0% 23.75%, 14.02% 39.66%, 23.77% 49.52%, 34.75% 56.91%, 50% 61.88%, 66.77% 58.62%, 81.45% 49.52%, 92.26% 36.97%, 100% 23.75%, 100% 100%, 0% 100%);
+
+    width: 100%;
+    height: 200px;
+    background-color: #171717;
+    top: -123px
+    }
+}
+
+.categorySec {
+    margin: 0;
+    padding: 76px 20px 0 20px;
+
+    h1 {
         margin: 0;
         padding: 0;
         font-size: 14px;
@@ -51,22 +85,24 @@
         font-weight: normal;
     }
 
-    .catArea{
+    .catArea {
         padding-top: 50px;
 
-        .nav-tabs{
+        .nav-tabs {
             border-bottom: none;
             display: flex;
             justify-content: center;
 
-            li{
+            li {
                 margin: 0 7px;
-                a.nav-link.active{
+
+                a.nav-link.active {
                     background-color: #359fd3;
                     border: none;
                     color: #fff;
                 }
-                a.nav-link{
+
+                a.nav-link {
                     background-color: #393939;
                     border: none;
                     color: #fff;
@@ -78,75 +114,158 @@
                 }
             }
         }
-        .tab-content{
+
+        .tab-content {
             margin-top: 30px !important;
 
-            .grayBox{
+            .col-md-4{
+                position: relative;
+            }
+
+            .col-md-4:nth-last-child(-n+3) {
+                .grayBox {
+                    &:hover {
+                        top: auto;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            // .col-md-4:nth-child(1) {
+            //     .grayBox {
+            //         &:hover {
+            //             top: 0;
+            //             bottom: auto;
+            //         }
+            //     }
+            // }
+
+            .grayBox {
                 background-color: #252525;
                 padding: 7px;
                 border-radius: 10px;
                 margin-bottom: 20px;
+                cursor: pointer;
+                transition: all ease 0.5s;
+                
+                &:hover {
+                    // transform: scale(1.1);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: auto;
+                    width: 100%;
+                    z-index: 10;
+                    transform: scale(1.1);
+
+                    .developTxt {
+                        font-size: 12px;
+                    }
+        
+                    .heading {
+                        color: #fff;
+                        font-weight: 600;
+                        margin: 5px 0;
+                        font-size: 15px;
+                    }
+        
+                    .contentText {
+                        font-size: 12px;
+                        line-height: 19px;
+                    }
+                }
+
+                &:hover .normalListing {
+                    display: none;
+                }
+                &:hover .hoverListing{
+                    width: 100%;
+                    display: block;
+                }
+                .normalListing {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                }
+                
+                .hoverListing{
+                    margin: 0;
+                    padding: 0;
+                    display: none;
+                    width: 100%;
+                }
             }
-            .boxContent{
+
+            .boxContent {
                 display: flex;
                 flex-direction: row;
                 align-items: flex-start;
 
-                img{
+                img {
                     border-radius: 10px;
                     width: 100%;
                 }
-                .imgArea{
+
+                .imgArea {
                     width: 40%;
                 }
 
-                .ContArea{
+                .ContArea {
                     padding-left: 2%;
                     width: 58%;
                 }
             }
-            .developTxt{
+
+            .developTxt {
                 font-size: 14px;
             }
-            .heading{
+
+            .heading {
                 color: #fff;
-                font-weight:600;
+                font-weight: 600;
                 margin: 5px 0;
                 font-size: 17px;
             }
-            .contentText{
+
+            .contentText {
                 font-size: 14px;
                 font-family: 'Nunito', sans-serif;
                 line-height: 19px;
             }
         }
     }
+
+    
 }
-.blueTxt{
+
+.blueTxt {
     color: #359FD3;
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
 }
+
 // content area end 
 
 
 // ****************responsive css start********************** //
 
 @media (max-width:991px) {
-    .bannerArea{
+    .bannerArea {
         display: none;
     }
-    .categorySec{
+
+    .categorySec {
         padding: 120px 0 0 0;
 
-        h1{
+        h1 {
             display: none;
         }
 
-        .catArea{
-            padding-top:0 ;
+        .catArea {
+            padding-top: 0;
 
-            .nav-tabs{
+            .nav-tabs {
                 flex-direction: row;
                 flex-wrap: nowrap;
                 overflow-x: auto;
@@ -154,37 +273,41 @@
                 justify-content: flex-start;
                 min-height: 42px;
 
-                &:-webkit-scrollbar{
+                &:-webkit-scrollbar {
                     width: 0px;
                     background: transparent;
                 }
 
-                li{
+                li {
                     margin: 0 5px;
-                    a.nav-link{
+
+                    a.nav-link {
                         white-space: nowrap;
                     }
                 }
             }
 
-            .tab-content{
-                .boxContent{
+            .tab-content {
+                .boxContent {
                     flex-direction: column;
-                    .imgArea{
+
+                    .imgArea {
                         width: 100%;
 
-                        img{
+                        img {
                             width: 100%;
                             height: 120px;
                             object-fit: cover;
                         }
                     }
-                    .ContArea{
+
+                    .ContArea {
                         padding-left: 0;
                         margin: 10px 0;
                         width: 100%;
                     }
-                    .contentText{
+
+                    .contentText {
                         display: none;
                     }
                 }

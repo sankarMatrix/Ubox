@@ -12,6 +12,9 @@ body{
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
 }
+.menuOff, .menuOn{
+    position: relative;
+}
 
 .menuOn .navbar-brand{
     filter: blur(2px);
