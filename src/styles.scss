@@ -2,34 +2,10 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
-@import url('//fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
 body{
     margin: 0;
     padding: 0;
     color: #8a8c8e;
     font-size: 13px;
-    overflow-x: hidden;
-    font-family: 'Lato', sans-serif;
 }
-
-.menuOn .navbar-brand{
-    filter: blur(2px);
-}
-
-.menuOn .home{
-    filter: blur(2px);
-}
-.menuOn .contAreaDetails{
-    filter: blur(2px);
-}
-.menuOn .footerArea{
-    filter: blur(2px);
-}
-.menuOff .navbar-collapse{
-    right: -383px !important;
-}
-.menuOn .navbar-collapse{
-    right:0 !important;
-}
-

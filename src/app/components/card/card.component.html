@@ -1,0 +1,7 @@
+<div class="card-element">
+
+    <div *ngFor="let card of cards;let i = index;" [style.background]="'url(' +card.image+ ')'" [style.display]="card.display" [class]="card.class">
+        <p>{{card.name}}</p>
+    </div> 
+
+</div>

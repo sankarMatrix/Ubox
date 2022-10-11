@@ -44,18 +44,18 @@
                 }
             }
 
-            &:first-child {
-
-                a {
-                    &:before {
+            &:first-child{
+                 
+                a{
+                    &:before{
                         content: '';
                     }
                 }
             }
 
-            &:last-child {
-
-                a {
+            &:last-child{
+                 
+                a{
                     padding-right: 0;
                 }
             }
@@ -64,7 +64,7 @@
         }
     }
 
-    .blueTxt {
+    .blueTxt{
         color: #4db1e2;
     }
 }
@@ -75,7 +75,7 @@
 }
 
 .search::placeholder {
-    color: #bebebe;
+    color: #fff;
     opacity: 1;
     /* Firefox */
 }
@@ -92,7 +92,7 @@
         justify-content: center;
         align-items: center;
 
-        &:hover {
+        &:hover{
             background-color: #212121;
         }
 
@@ -124,178 +124,3 @@
     display: flex;
     align-items: center;
 }
-
-.mobileLogo {
-    display: none;
-}
-
-.mobFooter {
-    display: none;
-}
-
-.dlogo{
-    display: block;
-}
-.mlogo{
-    display: none;
-}
-
-// ****************responsive css start********************** //
-
-@media (max-width:1217px) {
-    .customNav {
-        .rightNav {
-            li {
-                a {
-                    padding: 0 15px;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width:1143px) {
-    .customNav {
-        .rightNav {
-            li {
-                a {
-                    padding: 0 10px;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width:1116px) {
-    .customNav {
-        .rightNav {
-            li {
-                a {
-                    padding: 0 9px;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width:992px) {
-    .customNav {
-        font-size: 10px;
-        margin-bottom: 0 !important;
-    }
-}
-
-@media (max-width:991px) {
-    .navbar-toggler {
-        color: #fff;
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: none;
-    }
-
-    .navbar-collapse {
-        background-color: #171717;
-        width: 80%;
-        height: 100%;
-        position: fixed;
-        right: -383px;
-        top: 0;
-        transition: all ease 0.5s;
-        flex-basis: unset;
-        flex-grow: 0;
-        padding: 20px 0;
-    }
-
-    .navbar-collapse.show {
-        right: 0;
-    }
-
-    .collapse:not(.show) {
-        display: block;
-    }
-
-    .mobileLogo {
-        display: block;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .searchArea {
-        form {
-            width: 100%;
-        }
-
-        .search {
-            width: 100%;
-            margin-right: 0 !important;
-            padding: 8px 10px;
-        }
-    }
-
-    .connectPhAra {
-        display: none;
-    }
-
-    .customNav {
-        background-color:#171717 ;
-        .rightNav {
-            li {
-                a {
-                    &::before {
-                        content: '';
-                    }
-
-                }
-            }
-        }
-    }
-
-    .navbar-nav {
-        margin-bottom: 15px !important;
-        padding: 0 20px !important;
-    }
-
-    .rightNav {
-        padding: 0 20px !important;
-        .nav-item {
-            padding: 15px 0;
-            border-bottom: 1px solid #262626;
-        }
-    }
-
-    .mobFooter {
-        display: block;
-        margin: 0;
-        padding:30px 20px 0 20px;
-        list-style: none;
-        position: absolute;
-        bottom: 16px;
-        width: 100%;
-        border-top: 1px dashed #262626;
-
-
-
-        li {
-            margin: 0;
-            padding: 5px 0;
-            list-style: none;
-            text-align: center;
-            color: #8a8c8e;
-
-            span{
-                color: #fff;
-            }
-        }
-
-    }
-    .dlogo{
-        display: none;
-    }
-    .mlogo{
-        display: block;
-    }
-
-
-}
-

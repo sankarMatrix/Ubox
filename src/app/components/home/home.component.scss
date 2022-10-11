@@ -2,10 +2,9 @@
 .bannerArea{
     position:relative;
     width:100%; 
-    height: 387px;
-    // overflow:hidden;
+    height:400px;
+    overflow:hidden;
     z-index: 5;
-    text-align: center;
 
     &:after{
     content:'';
@@ -19,14 +18,6 @@
     border-bottom-right-radius: 100%;
     border-top:0;
     z-index:-1;
-    }
-
-    .banneranimation{
-        position: absolute;
-        top: 137px;
-        left: 0;
-        right: 0;
-        z-index: 2;
     }
 }
 // banner area end
@@ -118,65 +109,3 @@
     color: #4db1e2;
 }
 // content area end 
-
-
-// ****************responsive css start********************** //
-
-@media (max-width:991px) {
-    .bannerArea{
-        display: none;
-    }
-    .categorySec{
-        padding: 120px 0 0 0;
-
-        h1{
-            display: none;
-        }
-
-        .catArea{
-            padding-top:0 ;
-
-            .nav-tabs{
-                flex-direction: row;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                overflow-y: hidden;
-                justify-content: flex-start;
-                min-height: 42px;
-
-                &:-webkit-scrollbar{
-                    width: 0px;
-                    background: transparent;
-                }
-
-                li{
-                    margin: 0 5px;
-                    a.nav-link{
-                        white-space: nowrap;
-                    }
-                }
-            }
-
-            .tab-content{
-                .boxContent{
-                    flex-direction: column;
-                    .imgArea{
-                        width: 100%;
-
-                        img{
-                            width: 100%;
-                            height: 120px;
-                            object-fit: cover;
-                        }
-                    }
-                    .ContArea{
-                        padding-left: 0;
-                        margin: 10px 0;
-                    }
-                }
-            }
-        }
-
-
-    }
-}

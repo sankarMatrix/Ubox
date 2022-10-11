@@ -1,10 +1,6 @@
 .footerArea{
     background-color: #000;
     min-height: 44px;
-    @media screen and (max-width:767px) {
-        padding: 30px;
-        text-align: center;
-    }
 }
 .footerTextArea{
     display: flex;
@@ -19,26 +15,5 @@
     }
     .rightText{
         text-align: right;
-    }
-    @media screen and (max-width:767px) {
-        .rightText{
-            text-align: center;
-            display: block;
-            margin: 10px auto 10px;
-        }  
-        .middleTxt{
-            text-align: center;
-            display: block;
-            margin: 0px auto 0px;
-        }  
-        .col-md-4.col-sm-12{
-            order: 3;
-        }
-        .col-md-4.col-sm-12.middleTxt{
-            order: 1;
-        }
-        .col-md-4.col-sm-12.rightText{
-            order: 2;
-        }
     }
 }

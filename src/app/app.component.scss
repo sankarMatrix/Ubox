@@ -1,5 +1,111 @@
+// banner area start
+.bannerArea{
+    position:relative;
+    width:100%; 
+    height:400px;
+    overflow:hidden;
+    z-index: 5;
+
+    &:after{
+    content:'';
+    position:absolute;
+    top:0; 
+    left:-25%; 
+    bottom:4px;
+    width: 150%;
+    background-color: #000000;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-top:0;
+    z-index:-1;
+    }
+}
+// banner area end
+
+// content area start
+.contArea{
+    margin: 0;
+    padding: 0;
+    background-color: #171717;
+    min-height: 500px;
+    margin-top: -57px;
+}
+.categorySec{
+    margin: 0;
+    padding: 150px 20px 0 20px;
+
+    h1{
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .catArea{
+        padding-top: 50px;
+
+        .nav-tabs{
+            border-bottom: none;
+            display: flex;
+            justify-content: center;
+
+            li{
+                margin: 0 7px;
+                a.nav-link.active{
+                    background-color: #359fd3;
+                    border: none;
+                    color: #fff;
+                }
+                a.nav-link{
+                    background-color: #393939;
+                    border: none;
+                    color: #fff;
+                    border-radius: 20px;
+                    min-width: 80px;
+                    text-align: center;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+        }
+        .tab-content{
+            margin-top: 30px !important;
+
+            .grayBox{
+                background-color: #252525;
+                padding: 7px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+            .boxContent{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+
+                img{
+                    border-radius: 10px;
+                }
+
+                .ContArea{
+                    padding-left: 15px;
+                }
+            }
+            .developTxt{
+                font-size: 12px;
+            }
+            .heading{
+                color: #fff;
+                font-weight:600;
+                margin: 5px 0;
+            }
+            .contentText{
+                font-size: 12px;
+            }
+        }
+    }
+}
 .blueTxt{
     color: #4db1e2;
 }
-
 // content area end

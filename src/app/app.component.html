@@ -1,19 +1,12 @@
 <!--Header Open-->
-<div [ngClass]="statusBody ? 'menuOn' : 'menuOff'">
-    <app-header [menuOff]="statusBody" (bodyStatus)="changeStatus($event)"></app-header>
-</div>
-<div [ngClass]="statusBody ? 'menuOn' : 'menuOff'" (click)="hideMenu()">
+<app-header></app-header>
 <!--Header Close-->
 
 <!--Content Open-->
 <router-outlet></router-outlet>
 <!--Content Close-->
 
-</div>
 <!-- footer area start -->
-<div [ngClass]="statusBody ? 'menuOn' : 'menuOff'">
-    <app-footer></app-footer>
-</div>
+<app-footer></app-footer>
 <!-- footer area end -->
-
 

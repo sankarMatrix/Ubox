@@ -1,0 +1,44 @@
+.card-div {
+    height: 200px;
+    width: 30%;
+    border-radius: 20px;
+    opacity: 1;
+    
+
+    p{
+       
+        /* UI Properties */
+        text-align: left;
+        font: normal normal bold 20px/35px Lato;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        margin-top: 153px;
+        // margin-bottom: 1rem;
+    }
+  }
+
+.selected-card-div{
+    height: 250px;
+    width: 40%;
+    border-radius: 20px;
+    opacity: 1; 
+    z-index: 100;   
+
+    p{
+       
+        /* UI Properties */
+        text-align: left;
+        font: normal normal bold 20px/35px Lato;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        margin-top: 205px;
+        // margin-bottom: 1rem;
+    }
+}  
+
+
+.card-element {
+    display: flex;
+}  
