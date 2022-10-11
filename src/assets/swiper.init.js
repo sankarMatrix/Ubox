@@ -5,7 +5,7 @@ function swiperInit(){
     effect: 'coverflow',
     loop: true,
     centeredSlides: true,
-    slidesPerView: 'auto',
+    slidesPerView: 2.5,
     slideToClickedSlide:true,
     coverflow: {
       rotate: 0,
@@ -16,6 +16,3 @@ function swiperInit(){
     }
   });
 }
-$(function() {
-  alert('Hello, custom js');
-});
