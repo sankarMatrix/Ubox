@@ -1,0 +1,30 @@
+<!-- <div class="card-element">
+
+    <div *ngFor="let card of cards;let i = index;" [style.background]="'url(' +card.image+ ')'" [style.display]="card.display" [class]="card.class">
+        <p>{{card.name}}</p>
+    </div> 
+
+</div> -->
+
+<section id="slider">
+
+    <!-- <input type="radio" name="slider" id="s1" checked>
+    <input type="radio" name="slider" id="s2">
+    <input type="radio" name="slider" id="s3">
+    <input type="radio" name="slider" id="s4">
+    <input type="radio" name="slider" id="s5"> -->
+
+    <input type="radio" name="slider" id="s{{i+1}}" *ngFor="let card of cards; let i=index;" [checked]="i==selected_card ? true : false">
+
+    <!-- <label for="s{{i+1}}" id="slide{{i+1}}" *ngFor="let card of cards; let i=index;" ><img [src]="card.image" (click)="swipe(i, card.id)"></label> -->
+    <label for="s{{i+1}}" id="slide{{i+1}}" *ngFor="let card of cards; let i=index;" >
+        <img [src]="card.image"  class="card-element">
+        <div class="card-name">{{card.name}}</div>
+    </label>
+    <!-- <label for="s2" id="slide2"><img src="img2.jpg" alt=""></label>
+    <label for="s3" id="slide3"><img src="img3.jpg" alt=""></label>
+    <label for="s4" id="slide4"><img src="img4.jpg" alt=""></label>
+    <label for="s5" id="slide5"><img src="img5.jpg" alt=""></label> -->
+
+</section>
+

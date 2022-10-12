@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   @Input() status: any;
@@ -26,4 +26,8 @@ export class AppComponent {
   hideMenu() {
     this.statusBody = false;
   }
+
+  
 }
+
+
