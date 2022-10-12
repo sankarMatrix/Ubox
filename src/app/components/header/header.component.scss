@@ -106,9 +106,40 @@
             width: 12px;
             height: 17px;
         }
+        .greenIcon{
+            width: 12px;
+            height: 17px;
+            display: none;
+        }
+
+        .checkIcon{
+            width: 14px;
+            height: 10px;
+            display: none;
+        }
         .scan{
             width: 20px;
             height: 20px;
+        }
+    }
+
+    .connectPh.active {
+        border: 1px dashed #35D355;
+        color: #35D355;
+
+        .checkIcon{
+            width: 14px;
+            height: 10px;
+            display: block;
+        }
+        .scan{
+            display: none;
+        }
+        .greenIcon{
+            display: block;
+        }
+        .mobileIcon{
+            display: none;
         }
     }
 }
