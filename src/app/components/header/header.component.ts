@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { CardService } from 'src/app/services/card.service';
 
 @Component({
   selector: 'app-header',
@@ -25,7 +26,7 @@ export class HeaderComponent implements OnInit {
   @Output() bodyStatus = new EventEmitter<boolean>();
   @Input() menuOff: boolean = false;
 
-  constructor(private route:Router) { }
+  constructor(private route:Router, private modalService: NgbModal) { }
   searchEvent(){
     this.route.navigateByUrl('search-listing')
   }
