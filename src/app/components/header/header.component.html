@@ -2,16 +2,15 @@
       
       <nav class="navbar navbar-expand-lg navbar-light mb-3 customNav">
         <div class="container-fluid">
-          <a class="navbar-brand" [routerLink]="'.'"><img src="assets/images/logo_black.png" alt="" srcset="" class="dlogo"> <img src="assets/images/logo_mobile.png" alt="" srcset="" class="mlogo"></a>
+          <a class="navbar-brand" [routerLink]="'.'"><img src="./../../../assets/images/logo.png" alt="" srcset=""></a>
       
           <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
-          <button class="navbar-toggler" type="button" (click)="clickEvent()">
+          <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
             &#9776;
           </button>
       
           <!-- Step 2: Add the ngbCollapse directive to the element below. -->
           <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-            <div class="mobileLogo"><img src="assets/images/logo_black.png" alt="" srcset=""></div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item searchArea">
                     <form class="d-flex">
@@ -20,7 +19,7 @@
                 </li>
                 <li class="nav-item connectPhAra">
                     <a class="nav-link connectPh" href="#">
-                        <img src="assets/images/mobile_icon.png" class="mobileIcon" alt=""> <span>Connect your phone</span> <img src="assets/images/scanIcon.png" class="scan" alt="">
+                        <img src="./../../../assets/images/mobile.png" alt=""> <span>Connect your phone</span> <img src="./../../../assets/images/scan_img.png" alt="">
                     </a>
                 </li>
             </ul>
@@ -39,18 +38,6 @@
                     <a class="nav-link" href="#">
                         Do you want to create your first experience?
                     </a>
-                </li>
-            </ul>
-
-            <ul class="mobFooter">
-                <li class="nav-item">
-                    <span>Ubiquo Tech</span> 
-                </li>
-                <li class="nav-item">
-                    Say someting, <span>info@ubiquotechs.com</span>
-                </li>
-                <li class="nav-item">
-                    © 2022 by Ubiquo Technologies
                 </li>
             </ul>
           </div>
