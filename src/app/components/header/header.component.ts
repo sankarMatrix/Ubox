@@ -1,9 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-<<<<<<< HEAD
 import { Router } from '@angular/router';
-=======
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
->>>>>>> sankar
 
 @Component({
   selector: 'app-header',
