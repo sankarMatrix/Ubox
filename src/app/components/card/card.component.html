@@ -1,7 +1,13 @@
-<div class="card-element">
-
-    <div *ngFor="let card of cards;let i = index;" [style.background]="'url(' +card.image+ ')'" [style.display]="card.display" [class]="card.class">
-        <p>{{card.name}}</p>
-    </div> 
-
+<div class="swiper-container two">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let card of cards; let i = index;">
+      <div class="slider-image">
+        <img [src]="card.image">
+        <div class="card-name">{{card.name}}</div>
+      </div>      
+      
+    </div>
+    <!-- Add Pagination -->
+  </div>
+  <div class="swiper-pagination"></div>
 </div>
