@@ -11,5 +11,5 @@ export class SearchListingComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  public isCollapsed = true;
 }

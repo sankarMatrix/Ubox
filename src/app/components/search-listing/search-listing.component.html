@@ -7,13 +7,12 @@
                 <img src="assets/images/search.png" alt="" srcset="">
             </button>
         </form>
-        <!--<a class="btn btn-primary" (click)="basicCollapse.toggle()" role="button" [attr.aria-expanded]="!basicCollapse.collapsed" aria-controls="collapseExample">Link with href</a>-->
     </div>
     <!--Search Box Close-->
     <!--Search Top Bar Open-->
     <div class="searchTopBar">
         <form role="form">
-            <ul class="searchFilter">
+            <ul class="searchFilter" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
                 <li>
                     <label for="experienceType">Experience Type:</label>
                     <select name="ExperienceType" id="experienceType">
@@ -59,6 +58,9 @@
                     </select>
                 </li>
             </ul>
+            <button type="button" class="btn btn-outline-primary btn-toggle-searchFilter" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+                <img src="assets/images/arrow.png" alt="" srcset="">
+            </button>
         </form>
     </div>
     <!--Search Top Bar Close-->
