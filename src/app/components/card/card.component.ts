@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit } from '@angular/core';
 import { CardService } from 'src/app/services/card.service';
 declare const swiperInit: any;
 @Component({
@@ -6,7 +6,7 @@ declare const swiperInit: any;
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent implements OnInit {
+export class CardComponent implements OnInit, AfterViewInit {
 
   cards : any = [];
 
@@ -14,9 +14,13 @@ export class CardComponent implements OnInit {
   { }
 
   ngOnInit(): void {
-    swiperInit();
+
     //console.log(this.__card.card_detail);
     this.cards = this.__card.card_detail;
+  }
+
+  ngAfterViewInit(): void {
+    swiperInit();
   }
 
 }
