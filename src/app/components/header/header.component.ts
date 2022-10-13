@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { CardService } from 'src/app/services/card.service';
+import { Location} from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -26,12 +27,13 @@ export class HeaderComponent implements OnInit {
   @Output() bodyStatus = new EventEmitter<boolean>();
   @Input() menuOff: boolean = false;
 
-  constructor(private route:Router, private modalService: NgbModal) { }
+  constructor(private route:Router, private modalService: NgbModal, private location: Location) { }
   searchEvent(){
     this.route.navigateByUrl('search-listing')
   }
 
   ngOnInit(): void {
+    this.getPath()
   }
 
   public isMenuCollapsed = true;
@@ -60,6 +62,17 @@ export class HeaderComponent implements OnInit {
       return 'by clicking on a backdrop';
     } else {
       return `with: ${reason}`;
+    }
+  } 
+
+  isRoot=false
+  
+  getPath() {
+    console.log(this.location.path()); 
+    if (this.location.path() !== '') {
+      this.isRoot = false;
+    } else {
+      this.isRoot = true;
     }
   }
 

@@ -19,11 +19,11 @@ export class CardService {
   // ];
 
   card_detail: any = [
-    {id:1, name: 'Card 1', image: 'assets/images/card/image1.jpg'},
-    {id:2, name: 'Card 2', image: 'assets/images/card/image2.jpg'},
-    {id:3, name: 'Card 3', image: 'assets/images/card/image3.jpg'},
-    {id:4, name: 'Card 4', image: 'assets/images/card/image4.jpg'},
-    {id:5, name: 'Card 5', image: 'assets/images/card/image5.jpg'}
+    {id:1, name: '', image: 'assets/images/card/s1.png'},
+    {id:2, name: '', image: 'assets/images/card/s2.png'},
+    {id:3, name: '', image: 'assets/images/card/s3.png'},
+    {id:4, name: '', image: 'assets/images/card/s4.png'},
+    {id:5, name: '', image: 'assets/images/card/s5.png'}
   ];
 
 

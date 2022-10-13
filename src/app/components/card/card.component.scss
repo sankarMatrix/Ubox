@@ -1,39 +1,38 @@
-
 input[type=radio] {
-    position: relative;
-    top: 108%;
-    left: 50%;
-    width: 18px;
-    height: 18px;
-    margin: 0 15px 0 0;
-    opacity: 0.4;
-    transform: translateX(-83px);
-    cursor: pointer;
-    display: none;
-  }
-  
-  
-  input[type=radio]:nth-child(5) {
-    margin-right: 0px;
-  }
-  
-  input[type=radio]:checked {
-    opacity: 1;
-  }
+  position: relative;
+  top: 108%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: 0 15px 0 0;
+  opacity: 0.4;
+  transform: translateX(-83px);
+  cursor: pointer;
+  display: none;
+}
+
+
+input[type=radio]:nth-child(5) {
+  margin-right: 0px;
+}
+
+input[type=radio]:checked {
+  opacity: 1;
+}
 
 
 #slider {
-    position: relative;
-    //width: 50%;
-    //height: 32vw;
-    width: 35%;
-    height: 250px;
-    margin: 150px auto;
-    font-family: 'Helvetica Neue', sans-serif;
-    perspective: 1400px;
-    transform-style: preserve-3d;
-  }
-  #slider label,
+  position: relative;
+  //width: 50%;
+  //height: 32vw;
+  width: 45%;
+  height: 440px;
+  margin: 165px auto;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+#slider label,
 #slider label img {
   position: absolute;
   width: 100%;
@@ -56,66 +55,86 @@ input[type=radio] {
 }
 
 
-.card-element{
-    width: 90%;  
+.card-element {
+  width: 90%;
   height: 250px;
   border-radius: 20px;
 }
 
-#s1:checked ~ #slide1,
- #s2:checked ~ #slide2,
-  #s3:checked ~ #slide3,
-   #s4:checked ~ #slide4,
-    #s5:checked ~ #slide5 {
-  box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
+  box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
   transform: translate3d(0%, 0, 0px);
 }
 
-#s1:checked ~ #slide2,
- #s2:checked ~ #slide3,
-  #s3:checked ~ #slide4,
-   #s4:checked ~ #slide5,
-    #s5:checked ~ #slide1 {
-  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
-  transform: translate3d(20%, 0, -100px);
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+  transform: translate3d(24%, 0, -100px);
+  clip-path: polygon(0% 22.5%, 100% 0%, 100% 100%, 0% 73.63%);
 }
 
-#s1:checked ~ #slide3,
- #s2:checked ~ #slide4,
-  #s3:checked ~ #slide5,
-   #s4:checked ~ #slide1,
-    #s5:checked ~ #slide2 {
-  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
-  transform: translate3d(40%, 0, -250px);
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transform: translate3d(54%, 0, -250px);
+  clip-path: polygon(0% 22.5%, 100% 0%, 100% 100%, 0% 73.63%);
+
 }
 
-#s1:checked ~ #slide5,
- #s2:checked ~ #slide1,
-  #s3:checked ~ #slide2,
-   #s4:checked ~ #slide3,
-    #s5:checked ~ #slide4 {
-  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
-  transform: translate3d(-20%, 0, -100px);
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+  transform: translate3d(-24%, 0, -100px);
+  clip-path: polygon(0% 0%, 100% 22.5%, 100% 73.63%, 0% 100%);
 }
 
-#s1:checked ~ #slide4,
- #s2:checked ~ #slide5,
-  #s3:checked ~ #slide1,
-   #s4:checked ~ #slide2,
-    #s5:checked ~ #slide3 {
-  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
-  transform: translate3d(-40%, 0, -250px);
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transform: translate3d(-54%, 0, -250px);
+  clip-path: polygon(0% 0%, 100% 22.5%, 100% 73.63%, 0% 100%);
 }
 
 
 .card-name {
 
-    position: absolute;
-    bottom: 8px;
-    left: 48px;
-    color: #FFFFFF;
-    font: normal normal bold 29px/35px Lato;
-    letter-spacing: 0px;
-    opacity: 1;
-  }
+  position: absolute;
+  bottom: 8px;
+  left: 48px;
+  color: #FFFFFF;
+  font: normal normal bold 29px/35px Lato;
+  letter-spacing: 0px;
+  opacity: 1;
+}
 
+.bannerHeading{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+
+  .bannersmallText{
+    font-size: 14px;
+    color: #B0B3B5;
+  }
+  .bannerBigtext{
+    font-size: 29px;
+    font-weight: bold;
+    color: #fff;
+  }
+}

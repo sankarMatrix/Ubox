@@ -1,6 +1,6 @@
 <div class="headerArea">
 
-  <nav class="navbar navbar-expand-lg navbar-light mb-3 customNav">
+  <nav class="navbar navbar-expand-lg navbar-light mb-3" [ngClass]="{customNav : isRoot, newClass : !isRoot}">
     <div class="container-fluid">
       <a class="navbar-brand" [routerLink]="'.'"><img src="assets/images/logo_black.png" alt="" srcset="" class="dlogo">
         <img src="assets/images/logo_mobile.png" alt="" srcset="" class="mlogo"></a>
