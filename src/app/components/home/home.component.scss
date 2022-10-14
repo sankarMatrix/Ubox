@@ -96,6 +96,10 @@
             display: flex;
             justify-content: center;
 
+            &::-webkit-scrollbar{
+                display: none;
+            }
+
             li {
                 margin: 0 7px;
 
@@ -121,11 +125,11 @@
         .tab-content {
             margin-top: 30px !important;
 
-            .col-md-4{
+            .col-sm-12, .col-md-6, .col-lg-4{
                 position: relative;
             }
 
-            .col-md-4:nth-last-child(-n+3) {
+            .col-lg-4:nth-last-child(-n+3), .col-lg-6:nth-last-child(-n+3), .col-lg-12:nth-last-child(-n+3){
                 .grayBox {
                     &:hover {
                         top: auto;
@@ -253,9 +257,28 @@
 
 // ****************responsive css start********************** //
 
+@media (min-width:1600px) {
+    .categorySec{
+        .catArea{
+            .tab-content{
+                .grayBox{
+                    &:hover{
+                        transform: scale(1.05) !important;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
 @media (max-width:991px) {
     .bannerArea {
         display: none;
+    }
+
+    .navbar-brand{
+        padding-left: 30px;
     }
 
     .categorySec {
@@ -305,7 +328,7 @@
                     }
 
                     .ContArea {
-                        padding-left: 0;
+                        padding-left: 15px;
                         margin: 10px 0;
                         width: 100%;
                     }
@@ -318,5 +341,20 @@
         }
 
 
+    }
+}
+
+@media (max-width:767px) {
+    .categorySec{
+        .catArea{
+            .tab-content{
+                .grayBox{
+                    &:hover{
+                        transform: scale(0.97) !important;
+                    }
+                    
+                }
+            }
+        }
     }
 }
